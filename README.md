@@ -1,72 +1,65 @@
-🚀 Hybrid Automation Framework
+# 🚀 Hybrid Automation Framework
 
-A Hybrid Automation Testing Framework built using Java for performing End-to-End CRUD operations with API chaining and UI automation.
-This framework combines REST Assured for API testing and Selenium WebDriver for UI testing using TestNG.
+A hybrid automation testing framework built using Java to perform end-to-end CRUD operations with API chaining and UI automation.  
+The framework uses REST Assured for API testing and Selenium WebDriver for UI testing with TestNG.
 
-🛠 Tech Stack
+---
 
-Java
+## 🛠 Tech Stack
 
-Selenium WebDriver
+- Java  
+- Selenium WebDriver  
+- REST Assured  
+- TestNG  
+- Jackson Library (Serialization & Deserialization)  
+- Maven  
+- GitHub Actions (CI/CD)
 
-REST Assured
+---
 
-TestNG
+## ✨ Features
 
-Jackson Library (Serialization & Deserialization)
+- End-to-End CRUD operations (POST, GET, PUT, DELETE)
+- API chaining with dynamic response handling
+- Hybrid framework (API + UI automation)
+- POJO classes for request and response mapping
+- Serialization and deserialization using Jackson
+- Priority-based test execution using TestNG
+- Automated execution using GitHub Actions
 
-Maven
+---
 
-GitHub Actions (CI/CD)
+## 🧪 Test Coverage
 
-✨ Features
+**API Testing**
+- Create resource using POST
+- Retrieve resource using GET
+- Update resource using PUT
+- Delete resource using DELETE
+- Response validation and assertions
 
-End-to-End CRUD operations (POST, GET, PUT, DELETE)
+**UI Testing**
+- Selenium-based UI validations
+- UI verification using API test data
 
-API chaining with dynamic data handling
+---
 
-Hybrid framework (API + UI automation)
+## 🔄 API Execution Flow
 
-POJO classes for request and response mapping
-
-Serialization & Deserialization using Jackson
-
-Priority-based test execution using TestNG
-
-Automated execution with GitHub Actions
-
-🧪 Test Coverage
-API Testing
-
-Create resource using POST
-
-Retrieve resource using GET
-
-Update resource using PUT
-
-Delete resource using DELETE
-
-Response validation and assertions
-
-UI Testing
-
-Selenium-based UI validations
-
-UI checks using API-driven data
-
-🔄 API Execution Flow
 POST → GET → PUT → DELETE
 
-🔁 CI/CD with GitHub Actions
+---
 
-Automatically triggered on push and pull requests
+## 🔁 CI/CD with GitHub Actions
 
-Executes Maven build and TestNG tests
+- Triggered on every push and pull request
+- Executes Maven build and TestNG tests
+- Validates end-to-end API automation
+- Displays pipeline status and logs in GitHub Actions
 
-Validates E2E API automation in pipeline
+---
 
-Provides fast feedback on test results
+## ⭐ Support
 
-📊 Pipeline Status
+If you find this project useful, please give the repository a star ⭐
 
-View execution results and logs in the GitHub Actions tab.
