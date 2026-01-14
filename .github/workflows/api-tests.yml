@@ -1,0 +1,45 @@
+name: API Automation Tests
+
+on:
+  push:
+    branches: [ "main"]
+  pull_request:
+    branches: [ "main"]
+  workflow_dispatch:   # allows manual trigger
+
+jobs:
+  run-api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Set up Java
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          cache: maven
+
+      # Verify Java & Maven
+      - name: Verify Java & Maven
+        run: |
+          java -version
+          mvn -version
+
+      # Run API Tests
+      - name: Run REST Assured API Tests
+        run: mvn clean test
+
+      # Upload TestNG Reports (Optional but recommended)
+      - name: Upload Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-reports
+          path: |
+            test-output/
+            target/surefire-reports/
